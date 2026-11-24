@@ -8,7 +8,11 @@ import type {
 } from '../types/chat';
 import { getDeviceId } from '../utils/deviceId';
 
-const API_BASE = (import.meta.env.VITE_API_BASE_URL || '').replace(/\/+$/, '');
+const DEFAULT_PROD_API_BASE = 'https://askmed-api.onrender.com';
+const API_BASE = (
+  import.meta.env.VITE_API_BASE_URL ||
+  (import.meta.env.PROD ? DEFAULT_PROD_API_BASE : '')
+).replace(/\/+$/, '');
 
 export class ApiError extends Error {
   status: number;
