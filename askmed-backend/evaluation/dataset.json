@@ -1,0 +1,360 @@
+{
+  "datasetName": "AskMed WHO-FAO Healthy Diets RAG Evaluation",
+  "sourceDocument": {
+    "filename": "who_healthy_diets.pdf.pdf",
+    "title": "What are healthy diets? Joint statement by FAO and WHO (2024)",
+    "totalPdfPages": 23,
+    "pineconeNamespace": "builtin"
+  },
+  "questions": [
+    {
+      "id": "Q01",
+      "category": "direct_factual",
+      "question": "What are the four core principles of healthy diets?",
+      "expectedKeyFacts": ["adequate", "balanced", "moderate", "diverse"],
+      "expectedPages": [9],
+      "supportingPassage": "Healthy diets need to meet four core principles... Adequate, Balanced, Moderate, Diverse.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Core summary on PDF page 9 (printed page 2)."
+    },
+    {
+      "id": "Q02",
+      "category": "direct_factual",
+      "question": "What is the recommended maximum daily sodium intake for adults, and how much table salt does that equal?",
+      "expectedKeyFacts": ["2", "5", "salt"],
+      "expectedPages": [13, 21],
+      "supportingPassage": "Sodium intake should be restricted to 2 grams per day (corresponding to 5 grams of table salt, i.e., sodium chloride) in adults.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Appears on PDF page 13 (section 1.3) and PDF page 21 (Annex 2)."
+    },
+    {
+      "id": "Q03",
+      "category": "direct_factual",
+      "question": "What percentage of daily calories should come from protein according to the report?",
+      "expectedKeyFacts": ["10", "15", "protein"],
+      "expectedPages": [12],
+      "supportingPassage": "To meet the body's needs, 10–15% of calories consumed per day should be from protein.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 12 (printed page 5)."
+    },
+    {
+      "id": "Q04",
+      "category": "direct_factual",
+      "question": "How many grams of fruits and vegetables and how many grams of dietary fibre should adults aim for each day?",
+      "expectedKeyFacts": ["400", "25", "fibre"],
+      "expectedPages": [12, 20],
+      "supportingPassage": "Adults should aim for at least 400 grams of fruits and vegetables and 25 grams or more of naturally occurring dietary fibre from foods every day.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Stated on PDF page 12 and Annex 2 page 20."
+    },
+    {
+      "id": "Q05",
+      "category": "direct_factual",
+      "question": "What are the WHO limits for free sugars as a percentage of daily energy intake?",
+      "expectedKeyFacts": ["10%", "5%", "free sugar"],
+      "expectedPages": [13, 21],
+      "supportingPassage": "Free sugars are not essential nutrients and intake should be restricted to less than 10% of daily energy intake, with less than 5% associated with additional health benefits.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 13 and Annex 2 page 21."
+    },
+    {
+      "id": "Q06",
+      "category": "direct_factual",
+      "question": "How should nutrient needs be met for infants aged 0 to 6 months, and what does WHO recommend starting at 6 months?",
+      "expectedKeyFacts": ["exclusive breastfeeding", "6 months", "animal source"],
+      "expectedPages": [10],
+      "supportingPassage": "For infants 0 to 6 months of age, nutrient needs should be met through exclusive breastfeeding. As of 6 months of age... daily consumption of animal source foods, including unprocessed meat, fish or eggs.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 10 (section 1.1 Adequate)."
+    },
+    {
+      "id": "Q07",
+      "category": "direct_factual",
+      "question": "What daily potassium intake does WHO suggest for adults?",
+      "expectedKeyFacts": ["90", "3510", "potassium"],
+      "expectedPages": [21],
+      "supportingPassage": "WHO suggests a potassium intake of at least 90 mmol/day (3510 mg/day).",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 21 (Annex 2)."
+    },
+    {
+      "id": "Q08",
+      "category": "direct_factual",
+      "question": "How many food groups are used in the Minimum Dietary Diversity for Women (MDD-W) indicator?",
+      "expectedKeyFacts": ["10", "food groups", "mdd-w"],
+      "expectedPages": [14],
+      "supportingPassage": "While the 10 food groups used for MDD-W are universal (e.g., 'milk and milk products')...",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 14 (section 1.4 Diverse)."
+    },
+    {
+      "id": "Q09",
+      "category": "multi_passage",
+      "question": "How is a balanced diet different from an adequate diet?",
+      "expectedKeyFacts": ["energy", "fats", "carbohydrates", "proteins", "nutrient requirements", "without exceeding"],
+      "expectedPages": [9, 10],
+      "supportingPassage": "Page 9 defines Balanced (energy intake and energy sources: fats, carbohydrates, proteins); Page 10 defines Adequate (meets, without exceeding, nutrient requirements).",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Requires combining definitions from PDF pages 9 and 10."
+    },
+    {
+      "id": "Q10",
+      "category": "multi_passage",
+      "question": "What are the recommended daily calorie percentage ranges for protein, total fat, and carbohydrates in adults?",
+      "expectedKeyFacts": ["10", "15", "30", "45", "75"],
+      "expectedPages": [12, 20],
+      "supportingPassage": "Protein 10–15% of calories, fat 15–30% (30% or less), carbohydrates 45–75% of total daily calories.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Spans multiple chunks on PDF page 12 and Annex 2 page 20."
+    },
+    {
+      "id": "Q11",
+      "category": "multi_passage",
+      "question": "How do WHO's suggested daily fruit/vegetable and dietary fibre intakes scale across age groups for children and adolescents?",
+      "expectedKeyFacts": ["250", "350", "400", "15", "22", "25"],
+      "expectedPages": [20, 21],
+      "supportingPassage": "Page 20: fruits & veg 2–5y >=250g, 6–9y >=350g, >=10y >=400g; Page 21: fibre 2–5y >=15g, 6–9y >=22g, >=10y >=25g.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Crosses page boundary between PDF pages 20 and 21."
+    },
+    {
+      "id": "Q12",
+      "category": "multi_passage",
+      "question": "Summarize all WHO recommendations regarding total fat, saturated fat, trans-fat, and polyunsaturated fat.",
+      "expectedKeyFacts": ["30%", "10%", "1%", "polyunsaturated"],
+      "expectedPages": [12, 13, 20],
+      "supportingPassage": "Total fat <=30%, saturated fat <=10% (or <10%), trans-fat <=1% (no industrial trans-fat), polyunsaturated fat 6–10% of total energy.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Synthesizes PDF pages 12, 13, and 20."
+    },
+    {
+      "id": "Q13",
+      "category": "multi_passage",
+      "question": "What is the only exception to the principle of dietary diversity, and what does the report recommend for that age group?",
+      "expectedKeyFacts": ["first six months", "breastmilk", "exclusive breastfeeding"],
+      "expectedPages": [10, 14],
+      "supportingPassage": "Page 14: The only exception to this is during the first six months of life when infants should receive only breastmilk. Page 10: For infants 0 to 6 months, nutrient needs should be met through exclusive breastfeeding.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Connects section 1.4 (p. 14) with section 1.1 (p. 10)."
+    },
+    {
+      "id": "Q14",
+      "category": "reasoning",
+      "question": "Why does the report advise against using non-sugar sweeteners to cut down on free sugars?",
+      "expectedKeyFacts": ["weight control", "noncommunicable diseases", "not"],
+      "expectedPages": [13, 21],
+      "supportingPassage": "Reduction of free sugar consumption should be achieved without the use of non-sugar sweeteners, as evidence suggests that they do not help with long-term weight control or reducing the risk of diet-related NCDs.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Cause/rationale question grounded in pages 13 and 21."
+    },
+    {
+      "id": "Q15",
+      "category": "reasoning",
+      "question": "Why can consuming excessive amounts of protein be harmful according to the report?",
+      "expectedKeyFacts": ["metabolic burden", "kidneys"],
+      "expectedPages": [12],
+      "supportingPassage": "Consuming excessive amounts of protein however can place a metabolic burden on the body, particularly the kidneys.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 12."
+    },
+    {
+      "id": "Q16",
+      "category": "reasoning",
+      "question": "Why is food safety considered essential for a diet to be healthy?",
+      "expectedKeyFacts": ["adverse health", "foodborne", "utilization of nutrients"],
+      "expectedPages": [9],
+      "supportingPassage": "Diets can only be healthy if foods and beverages are safe... Food safety ensures the prevention of foodborne diseases and the efficient utilization of nutrients.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 9."
+    },
+    {
+      "id": "Q17",
+      "category": "reasoning",
+      "question": "Why are ultra-processed foods (UPFs) a concern beyond just their fat, sodium, and sugar content?",
+      "expectedKeyFacts": ["processing", "structure", "beyond", "negative health"],
+      "expectedPages": [13, 14],
+      "supportingPassage": "Many UPF have undergone processing that alters the structure of the original food ingredients... Evidence suggests that the associations with negative health effects go beyond their fat, sodium and sugar content.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF pages 13 and 14."
+    },
+    {
+      "id": "Q18",
+      "category": "reasoning",
+      "question": "If the four principles of healthy diets are universal, why do national dietary guidelines differ across countries?",
+      "expectedKeyFacts": ["contextual", "culture", "economic", "availability"],
+      "expectedPages": [15],
+      "supportingPassage": "While the principles of healthy diets are universal, dietary patterns are highly contextual... determined by social, economic and environmental factors including preferences, culture, traditions, religion, income, availability and affordability.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "PDF page 15."
+    },
+    {
+      "id": "Q19",
+      "category": "follow_up",
+      "question": "Which of these principles is most closely related to eating a variety of foods?",
+      "conversationHistory": [
+        { "role": "user", "content": "What are the four core principles of healthy diets?" },
+        { "role": "assistant", "content": "The four core principles of healthy diets are: 1. Adequate, 2. Balanced, 3. Moderate, and 4. Diverse [WHO-FAO Healthy Diets Report, p. 9]." }
+      ],
+      "expectedKeyFacts": ["diverse", "variety"],
+      "expectedPages": [9, 14],
+      "supportingPassage": "Diverse: Including a wide variety of nutritious foods within and across food groups.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Follow-up turn 2 referencing the 4 principles from turn 1."
+    },
+    {
+      "id": "Q20",
+      "category": "follow_up",
+      "question": "Explain the second principle you mentioned earlier in simple terms.",
+      "conversationHistory": [
+        { "role": "user", "content": "What are the four core principles of healthy diets?" },
+        { "role": "assistant", "content": "The four core principles of healthy diets are: 1. Adequate, 2. Balanced, 3. Moderate, and 4. Diverse [WHO-FAO Healthy Diets Report, p. 9]." },
+        { "role": "user", "content": "Which of these principles is most closely related to eating a variety of foods?" },
+        { "role": "assistant", "content": "The Diverse principle is most closely related to eating a variety of foods [WHO-FAO Healthy Diets Report, p. 9]." }
+      ],
+      "expectedKeyFacts": ["balanced", "energy", "fats", "carbohydrates", "proteins"],
+      "expectedPages": [9, 12],
+      "supportingPassage": "Balanced: In energy intake, and energy sources (i.e., fats, carbohydrates and proteins) to promote healthy weight, growth and disease prevention.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Tests ordinal reference resolution against turn 1's list rather than turn 2's Diverse answer."
+    },
+    {
+      "id": "Q21",
+      "category": "follow_up",
+      "question": "Can I replace them with non-sugar sweeteners instead?",
+      "conversationHistory": [
+        { "role": "user", "content": "What is the recommended limit for free sugars?" },
+        { "role": "assistant", "content": "Free sugars should be restricted to less than 10% of daily energy intake, with less than 5% offering additional health benefits [WHO-FAO Healthy Diets Report, p. 13]." }
+      ],
+      "expectedKeyFacts": ["not", "non-sugar sweeteners", "weight"],
+      "expectedPages": [13, 21],
+      "supportingPassage": "Reduction of free sugar consumption should be achieved without the use of non-sugar sweeteners, as evidence suggests that they do not help with long-term weight control or reducing the risk of diet-related NCDs.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Pronoun follow-up ('them' -> free sugars)."
+    },
+    {
+      "id": "Q22",
+      "category": "follow_up",
+      "question": "What about a 7-year-old child—how much of them should they eat per day?",
+      "conversationHistory": [
+        { "role": "user", "content": "How many grams of fruits and vegetables should adults eat per day?" },
+        { "role": "assistant", "content": "Adults should consume at least 400 grams of vegetables and fruits per day [WHO-FAO Healthy Diets Report, p. 20]." }
+      ],
+      "expectedKeyFacts": ["350", "vegetables", "fruits"],
+      "expectedPages": [20],
+      "supportingPassage": "In children and adolescents, WHO suggests... 6–9 years old, at least 350 grams per day.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "notes": "Follow-up pronoun resolution ('them' -> vegetables and fruits) + age bracket lookup (7 -> 6–9 years = 350 g)."
+    },
+    {
+      "id": "Q23",
+      "category": "unsupported_healthcare",
+      "question": "What does the report recommend regarding ketogenic diets for managing drug-resistant epilepsy?",
+      "expectedKeyFacts": [],
+      "expectedPages": [],
+      "supportingPassage": "",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "notes": "Verified 'ketogenic' is completely absent from the PDF."
+    },
+    {
+      "id": "Q24",
+      "category": "unsupported_healthcare",
+      "question": "What is the safe daily caffeine limit during pregnancy according to the report?",
+      "expectedKeyFacts": [],
+      "expectedPages": [],
+      "supportingPassage": "",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "notes": "Verified 'caffeine' is completely absent from the PDF."
+    },
+    {
+      "id": "Q25",
+      "category": "unsupported_healthcare",
+      "question": "How should basal insulin doses be adjusted for Type 1 diabetes patients?",
+      "expectedKeyFacts": [],
+      "expectedPages": [],
+      "supportingPassage": "",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "notes": "Verified 'insulin' is completely absent from the PDF."
+    },
+    {
+      "id": "Q26",
+      "category": "unsupported_healthcare",
+      "question": "What are the early symptoms and antibiotic treatments for Lyme disease?",
+      "expectedKeyFacts": [],
+      "expectedPages": [],
+      "supportingPassage": "",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "notes": "Verified 'lyme' is completely absent from the PDF."
+    },
+    {
+      "id": "Q27",
+      "category": "unsupported_healthcare",
+      "question": "Does the report recommend intermittent fasting protocols such as 16:8 for longevity?",
+      "expectedKeyFacts": [],
+      "expectedPages": [],
+      "supportingPassage": "",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "notes": "Verified 'intermittent fasting' is completely absent from the PDF."
+    },
+    {
+      "id": "Q28",
+      "category": "misleading_premise",
+      "question": "Since the report recommends using non-sugar sweeteners for long-term weight control, what daily dosage does it prescribe?",
+      "expectedKeyFacts": ["not", "non-sugar sweeteners", "weight control"],
+      "expectedPages": [13, 21],
+      "supportingPassage": "WHO suggests that non-sugar sweeteners not be used as a means of achieving weight control or reducing the risk of noncommunicable diseases.",
+      "answerable": true,
+      "expectedBehavior": "correct_premise",
+      "notes": "False premise: report advises AGAINST non-sugar sweeteners for weight control and prescribes no dosage."
+    },
+    {
+      "id": "Q29",
+      "category": "misleading_premise",
+      "question": "What exact safe daily limit of ultra-processed foods (UPFs) does the WHO-FAO report establish?",
+      "expectedKeyFacts": ["not", "defined", "further research"],
+      "expectedPages": [14],
+      "supportingPassage": "An acceptable level of UPF consumption has not yet been defined, and further research is needed to understand the relationships between UPF intakes and disease outcomes.",
+      "answerable": true,
+      "expectedBehavior": "correct_premise",
+      "notes": "False premise: report explicitly states NO acceptable level of UPF consumption has been defined yet."
+    },
+    {
+      "id": "Q30",
+      "category": "misleading_premise",
+      "question": "Why does the report advise introducing diverse solid foods to infants starting at 3 months of age?",
+      "expectedKeyFacts": ["6 months", "breastmilk", "exclusive breastfeeding"],
+      "expectedPages": [10, 14],
+      "supportingPassage": "For infants 0 to 6 months of age, nutrient needs should be met through exclusive breastfeeding... The only exception to dietary diversity is during the first six months of life when infants should receive only breastmilk.",
+      "answerable": true,
+      "expectedBehavior": "correct_premise",
+      "notes": "False premise: 0–6 months is exclusive breastfeeding only; complementary foods begin at 6 months, not 3."
+    }
+  ]
+}
+

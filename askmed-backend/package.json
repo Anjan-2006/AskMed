@@ -1,0 +1,30 @@
+{
+  "name": "askmed-backend",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "test": "node --test tests/*.test.js",
+    "test:cli": "node scripts/test-cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "AskMed - Advanced RAG healthcare information retrieval backend (SDG 3)",
+  "type": "module",
+  "dependencies": {
+    "@pinecone-database/pinecone": "^9.2.0",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "groq-sdk": "^1.6.0",
+    "mongoose": "^9.12.3",
+    "multer": "^2.5.0",
+    "nodemon": "^3.1.14",
+    "pdf-parse": "^2.4.5"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

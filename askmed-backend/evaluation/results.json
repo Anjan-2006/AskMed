@@ -1,0 +1,1633 @@
+{
+  "summary": {
+    "runAt": "2026-11-24T13:45:18.698Z",
+    "model": "openai/gpt-oss-120b",
+    "threshold": 0.15,
+    "scope": "builtin",
+    "totalEvaluated": 30,
+    "answerableCount": 25,
+    "unsupportedCount": 5,
+    "overallPassCount": 27,
+    "retrieval": {
+      "recallAt5": 0.96,
+      "recallAt5Formatted": "96.0% (24/25)",
+      "mrr": 0.96,
+      "retrievalFailureCount": 1
+    },
+    "generation": {
+      "answerCorrectness": 0.88,
+      "answerCorrectnessFormatted": "88.0% (22/25)",
+      "faithfulness": 0.88,
+      "faithfulnessFormatted": "88.0% (22/25)",
+      "citationAccuracy": 0.88,
+      "citationAccuracyFormatted": "88.0% (22/25)",
+      "refusalAccuracy": 1,
+      "refusalAccuracyFormatted": "100.0% (5/5)",
+      "falseAnswerRate": 0,
+      "falseAnswerRateFormatted": "0.0% (0/5)"
+    }
+  },
+  "results": [
+    {
+      "id": "Q01",
+      "category": "direct_factual",
+      "question": "What are the four core principles of healthy diets?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        9
+      ],
+      "expectedKeyFacts": [
+        "adequate",
+        "balanced",
+        "moderate",
+        "diverse"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9965,
+        "retrievedPages": [
+          9,
+          15,
+          15,
+          10,
+          14
+        ],
+        "citedPages": [
+          9
+        ],
+        "warnings": [],
+        "answer": "The WHO‑FAO Healthy Diets Report defines the four universal core principles of a healthy diet as :\n\n- **Adequate** – providing enough essential nutrients without excess [WHO-FAO Healthy Diets Report, p. 9]  \n- **Balanced** – supplying appropriate amounts of energy and macronutrients (fats, carbohydrates, proteins) to support healthy weight, growth and disease prevention [WHO-FAO Healthy Diets Report, p. 9]  \n- **Moderate** – limiting consumption of foods, nutrients or other compounds that have detrimental health effects [WHO-FAO Healthy Diets Report, p. 9]  \n- **Diverse** – including a wide variety of nutritious foods across and within food groups to promote nutrient adequacy and other health‑promoting substances [WHO-FAO Healthy Diets Report, p. 9]",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "adequate",
+          "balanced",
+          "moderate",
+          "diverse"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 11285
+    },
+    {
+      "id": "Q02",
+      "category": "direct_factual",
+      "question": "What is the recommended maximum daily sodium intake for adults, and how much table salt does that equal?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        13,
+        21
+      ],
+      "expectedKeyFacts": [
+        "2",
+        "5",
+        "salt"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9466,
+        "retrievedPages": [
+          21,
+          13
+        ],
+        "citedPages": [
+          21,
+          13
+        ],
+        "warnings": [],
+        "answer": "The WHO recommends that adults limit sodium intake to **about 2 grams per day**, which corresponds to **approximately 5 grams of table salt (sodium chloride)** per day[WHO-FAO Healthy Diets Report, p. 21][WHO-FAO Healthy Diets Report, p. 13].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "2",
+          "5",
+          "salt"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 5982
+    },
+    {
+      "id": "Q03",
+      "category": "direct_factual",
+      "question": "What percentage of daily calories should come from protein according to the report?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        12
+      ],
+      "expectedKeyFacts": [
+        "10",
+        "15",
+        "protein"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9706,
+        "retrievedPages": [
+          12,
+          12
+        ],
+        "citedPages": [
+          12
+        ],
+        "warnings": [],
+        "answer": "According to the report, protein should provide 10 %– 15 % of the calories you consume each day [WHO-FAO Healthy Diets Report, p. 12].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "10",
+          "15",
+          "protein"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 6178
+    },
+    {
+      "id": "Q04",
+      "category": "direct_factual",
+      "question": "How many grams of fruits and vegetables and how many grams of dietary fibre should adults aim for each day?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        12,
+        20
+      ],
+      "expectedKeyFacts": [
+        "400",
+        "25",
+        "fibre"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.8247,
+        "retrievedPages": [
+          20,
+          20,
+          21,
+          12
+        ],
+        "citedPages": [
+          20,
+          12
+        ],
+        "warnings": [],
+        "answer": "Adults should aim for **at least 400 grams of fruits and vegetables each day** [WHO-FAO Healthy Diets Report, p. 20][WHO-FAO Healthy Diets Report, p. 12] and **at least 25 grams of naturally‑occurring dietary fibre each day** [WHO-FAO Healthy Diets Report, p. 20][WHO-FAO Healthy Diets Report, p. 12].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "400",
+          "25",
+          "fibre"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 5155
+    },
+    {
+      "id": "Q05",
+      "category": "direct_factual",
+      "question": "What are the WHO limits for free sugars as a percentage of daily energy intake?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        13,
+        21
+      ],
+      "expectedKeyFacts": [
+        "10%",
+        "5%",
+        "free sugar"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9924,
+        "retrievedPages": [
+          13,
+          21,
+          20,
+          20
+        ],
+        "citedPages": [
+          13,
+          21
+        ],
+        "warnings": [],
+        "answer": "The WHO recommends that free‑sugar intake be kept to **less than 10 % of total daily energy** [WHO-FAO Healthy Diets Report, p. 13][WHO-FAO Healthy Diets Report, p. 21].  \n\nIt also notes a **further conditional recommendation** to reduce free‑sugar intake to **below 5 % of total daily energy** for additional health benefits [WHO-FAO Healthy Diets Report, p. 13][WHO-FAO Healthy Diets Report, p. 21].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "10%",
+          "5%",
+          "free sugar"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 20801
+    },
+    {
+      "id": "Q06",
+      "category": "direct_factual",
+      "question": "How should nutrient needs be met for infants aged 0 to 6 months, and what does WHO recommend starting at 6 months?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        10
+      ],
+      "expectedKeyFacts": [
+        "exclusive breastfeeding",
+        "6 months",
+        "animal source"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9876,
+        "retrievedPages": [
+          10,
+          16,
+          20,
+          20,
+          19
+        ],
+        "citedPages": [
+          10
+        ],
+        "warnings": [],
+        "answer": "Infants from birth to 6 months should obtain all of their nutrient requirements through **exclusive breastfeeding** [WHO-FAO Healthy Diets Report, p. 10].  \n\nFrom 6 months onward, WHO advises that **breastfeeding should continue and be complemented with a daily portion of animal‑source foods** such as unprocessed meat, fish or eggs [WHO-FAO Healthy Diets Report, p. 10].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "exclusive breastfeeding",
+          "6 months",
+          "animal source"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 22794
+    },
+    {
+      "id": "Q07",
+      "category": "direct_factual",
+      "question": "What daily potassium intake does WHO suggest for adults?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        21
+      ],
+      "expectedKeyFacts": [
+        "90",
+        "3510",
+        "potassium"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.991,
+        "retrievedPages": [
+          21,
+          20,
+          21,
+          19
+        ],
+        "citedPages": [
+          21
+        ],
+        "warnings": [],
+        "answer": "The WHO recommends that adults consume at least 90 mmol of potassium per day, which corresponds to about 3 510 mg per day [WHO-FAO Healthy Diets Report, p. 21].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "90",
+          "3510",
+          "potassium"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 21329
+    },
+    {
+      "id": "Q08",
+      "category": "direct_factual",
+      "question": "How many food groups are used in the Minimum Dietary Diversity for Women (MDD-W) indicator?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        14
+      ],
+      "expectedKeyFacts": [
+        "10",
+        "food groups",
+        "mdd-w"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9924,
+        "retrievedPages": [
+          14,
+          17,
+          17
+        ],
+        "citedPages": [
+          14
+        ],
+        "warnings": [],
+        "answer": "The Minimum Dietary Diversity for Women (MDD‑W) indicator uses **10 food groups** [WHO-FAO Healthy Diets Report, p. 14].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "10",
+          "food groups",
+          "mdd-w"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 19693
+    },
+    {
+      "id": "Q09",
+      "category": "multi_passage",
+      "question": "How is a balanced diet different from an adequate diet?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        9,
+        10
+      ],
+      "expectedKeyFacts": [
+        "energy",
+        "fats",
+        "carbohydrates",
+        "proteins",
+        "nutrient requirements",
+        "without exceeding"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9782,
+        "retrievedPages": [
+          10,
+          9,
+          13
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I could not find enough information in the available sources to answer this.",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": false,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [
+          "energy",
+          "fats",
+          "carbohydrates",
+          "proteins",
+          "nutrient requirements",
+          "without exceeding"
+        ],
+        "citationAccurate": false,
+        "faithful": false,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": false,
+      "failureStage": "Relevance gate",
+      "tookMs": 11795
+    },
+    {
+      "id": "Q10",
+      "category": "multi_passage",
+      "question": "What are the recommended daily calorie percentage ranges for protein, total fat, and carbohydrates in adults?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        12,
+        20
+      ],
+      "expectedKeyFacts": [
+        "10",
+        "15",
+        "30",
+        "45",
+        "75"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.7953,
+        "retrievedPages": [
+          12,
+          12,
+          20,
+          20,
+          12
+        ],
+        "citedPages": [
+          12
+        ],
+        "warnings": [],
+        "answer": "- **Protein:** Adults should obtain **10 % to 15 %** of their total daily calories from protein[WHO-FAO Healthy Diets Report, p. 12].  \n\n- **Total fat:** The recommendation is a minimum of **15 %** and an upper limit of **30 %** of total energy intake from fat[WHO-FAO Healthy Diets Report, p. 12].  \n\n- **Carbohydrates:** Carbohydrate intake should provide **at least 45 %** and **no more than 75 %** of total daily calories[WHO-FAO Healthy Diets Report, p. 12].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "10",
+          "15",
+          "30",
+          "45",
+          "75"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 21486
+    },
+    {
+      "id": "Q11",
+      "category": "multi_passage",
+      "question": "How do WHO's suggested daily fruit/vegetable and dietary fibre intakes scale across age groups for children and adolescents?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        20,
+        21
+      ],
+      "expectedKeyFacts": [
+        "250",
+        "350",
+        "400",
+        "15",
+        "22",
+        "25"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9352,
+        "retrievedPages": [
+          20,
+          20,
+          21,
+          10,
+          20
+        ],
+        "citedPages": [
+          20,
+          21
+        ],
+        "warnings": [],
+        "answer": "- **Fruit and vegetable intake (conditional recommendation)**  \n  * Ages 2 – 5 years: at least 250 g per day[WHO-FAO Healthy Diets Report, p. 20]  \n  * Ages 6 – 9 years: at least 350 g per day[WHO-FAO Healthy Diets Report, p. 20]  \n  * Ages 10 years or older: at least 400 g per day[WHO-FAO Healthy Diets Report, p. 20]\n\n- **Dietary‑fibre intake (conditional recommendation)**  \n  * Ages 2 – 5 years: at least 15 g per day[WHO-FAO Healthy Diets Report, p. 21]  \n  * Ages 6 – 9 years: at least 22 g per day[WHO-FAO Healthy Diets Report, p. 21]  \n  * Ages 10 years or older: at least 25 g per day[WHO-FAO Healthy Diets Report, p. 21]\n\nThus, as children grow older, WHO suggests progressively higher amounts of both fruits/vegetables and dietary fibre: 250 g → 350 g → 400 g of produce, and 15 g → 22 g → 25 g of fibre per day for the three age brackets.",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "250",
+          "350",
+          "400",
+          "15",
+          "22",
+          "25"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 17678
+    },
+    {
+      "id": "Q12",
+      "category": "multi_passage",
+      "question": "Summarize all WHO recommendations regarding total fat, saturated fat, trans-fat, and polyunsaturated fat.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        12,
+        13,
+        20
+      ],
+      "expectedKeyFacts": [
+        "30%",
+        "10%",
+        "1%",
+        "polyunsaturated"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9985,
+        "retrievedPages": [
+          20,
+          20,
+          13,
+          16,
+          20,
+          12
+        ],
+        "citedPages": [
+          20,
+          12
+        ],
+        "warnings": [],
+        "answer": "- **Total fat** – WHO recommends that adults limit total fat intake to 30 % of total energy intake or less (conditional recommendation) [WHO-FAO Healthy Diets Report, p. 20].\n\n- **Saturated fat** – WHO recommends that adults and children reduce saturated fatty‑acid intake to 10 % of total energy intake (strong recommendation) [WHO-FAO Healthy Diets Report, p. 20]; it also suggests further reducing saturated‑fat intake to < 10 % of total energy (conditional recommendation) [WHO-FAO Healthy Diets Report, p. 20].  \n  In addition, WHO advises replacing saturated fatty acids with polyunsaturated fatty acids (strong recommendation) [WHO-FAO Healthy Diets Report, p. 20] or with monounsaturated fatty acids from plant sources (conditional recommendation) [WHO-FAO Healthy Diets Report, p. 20].\n\n- **Trans‑fat** – WHO recommends that adults and children reduce trans‑fatty‑acid intake to 1 % of total energy intake (strong recommendation) [WHO-FAO Healthy Diets Report, p. 20]; it also suggests further reducing trans‑fat intake to < 1 % of total energy (conditional recommendation) [WHO-FAO Healthy Diets Report, p. 20].  \n  WHO further recommends replacing trans‑fatty acids in the diet with polyunsaturated fatty acids or monounsaturated fatty acids primarily from plant sources (conditional recommendation) [WHO-FAO Healthy Diets Report, p. 20].\n\n- **Polyunsaturated fat** – WHO advises that polyunsaturated fatty acids should make up 6 %–10 % of total energy intake [WHO-FAO Healthy Diets Report, p. 12] and that they are the preferred replacement for both saturated and trans‑fatty acids (see the recommendations above) [WHO-FAO Healthy Diets Report, p. 20].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "30%",
+          "10%",
+          "1%",
+          "polyunsaturated"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 31934
+    },
+    {
+      "id": "Q13",
+      "category": "multi_passage",
+      "question": "What is the only exception to the principle of dietary diversity, and what does the report recommend for that age group?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        10,
+        14
+      ],
+      "expectedKeyFacts": [
+        "first six months",
+        "breastmilk",
+        "exclusive breastfeeding"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.7635,
+        "retrievedPages": [
+          14,
+          14,
+          14,
+          17
+        ],
+        "citedPages": [
+          14
+        ],
+        "warnings": [],
+        "answer": "The report notes that the principle of dietary diversity has one exception: during the **first six months of life**, infants should receive **only breast‑milk** and not a varied diet [WHO-FAO Healthy Diets Report, p. 14].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "first six months",
+          "breastmilk",
+          "exclusive breastfeeding"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 15743
+    },
+    {
+      "id": "Q14",
+      "category": "reasoning",
+      "question": "Why does the report advise against using non-sugar sweeteners to cut down on free sugars?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        13,
+        21
+      ],
+      "expectedKeyFacts": [
+        "weight control",
+        "noncommunicable diseases",
+        "not"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9521,
+        "retrievedPages": [
+          13,
+          21,
+          21
+        ],
+        "citedPages": [
+          13,
+          21
+        ],
+        "warnings": [],
+        "answer": "The report says that non‑sugar sweeteners should not be used to cut down free sugars because the evidence shows they do **not** help with long‑term weight control or lower the risk of diet‑related non‑communicable diseases[WHO-FAO Healthy Diets Report, p. 13]. Accordingly, WHO’s conditional recommendation is that non‑sugar sweeteners not be used as a strategy for achieving weight control or reducing NCD risk[WHO-FAO Healthy Diets Report, p. 21].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "weight control",
+          "noncommunicable diseases",
+          "not"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 17163
+    },
+    {
+      "id": "Q15",
+      "category": "reasoning",
+      "question": "Why can consuming excessive amounts of protein be harmful according to the report?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        12
+      ],
+      "expectedKeyFacts": [
+        "metabolic burden",
+        "kidneys"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9053,
+        "retrievedPages": [
+          12
+        ],
+        "citedPages": [
+          12
+        ],
+        "warnings": [],
+        "answer": "Consuming too much protein can be harmful because it may place a metabolic burden on the body, especially on the kidneys[WHO-FAO Healthy Diets Report, p. 12].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "metabolic burden",
+          "kidneys"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 15144
+    },
+    {
+      "id": "Q16",
+      "category": "reasoning",
+      "question": "Why is food safety considered essential for a diet to be healthy?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        9
+      ],
+      "expectedKeyFacts": [
+        "adverse health",
+        "foodborne",
+        "utilization of nutrients"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9645,
+        "retrievedPages": [
+          9,
+          9,
+          15,
+          15
+        ],
+        "citedPages": [
+          9
+        ],
+        "warnings": [],
+        "answer": "Food safety is a prerequisite for a diet to be healthy because unsafe foods can cause adverse health effects, including food‑borne diseases, and can undermine the body’s ability to use nutrients efficiently.  Consuming unsafe food therefore threatens the very purpose of a healthy diet—preventing deficiencies and promoting health—and it especially harms vulnerable groups such as children and older adults.  For these reasons the report states that “diets can only be healthy if foods and beverages are safe” and that food safety “ensures the prevention of food‑borne diseases and the efficient utilization of nutrients”[WHO-FAO Healthy Diets Report, p. 9].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "adverse health",
+          "foodborne",
+          "utilization of nutrients"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 18454
+    },
+    {
+      "id": "Q17",
+      "category": "reasoning",
+      "question": "Why are ultra-processed foods (UPFs) a concern beyond just their fat, sodium, and sugar content?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        13,
+        14
+      ],
+      "expectedKeyFacts": [
+        "processing",
+        "structure",
+        "beyond",
+        "negative health"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.8924,
+        "retrievedPages": [
+          14,
+          13,
+          13
+        ],
+        "citedPages": [
+          14,
+          13
+        ],
+        "warnings": [],
+        "answer": "Ultra‑processed foods are worrisome not only because they can be high in fat, sodium or sugar, but also because other aspects of their formulation and processing appear to harm health.  The report notes that many UPFs contain added fats, sugars, artificial sweeteners, sodium, food additives and undergo processing that changes the original food‑ingredient structure, and that “the associations with negative health effects go beyond their fat, sodium and sugar content”[WHO-FAO Healthy Diets Report, p. 14].  Moreover, a large body of evidence links consumption of these foods to a wide range of adverse outcomes—including premature mortality, cancer, cardiovascular disease, overweight, obesity, type 2 diabetes and impaired mental, respiratory and gastrointestinal health—suggesting that factors beyond the basic nutrient profile contribute to risk[WHO-FAO Healthy Diets Report, p. 13].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "processing",
+          "structure",
+          "beyond",
+          "negative health"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 15903
+    },
+    {
+      "id": "Q18",
+      "category": "reasoning",
+      "question": "If the four principles of healthy diets are universal, why do national dietary guidelines differ across countries?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        15
+      ],
+      "expectedKeyFacts": [
+        "contextual",
+        "culture",
+        "economic",
+        "availability"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9338,
+        "retrievedPages": [
+          15,
+          15,
+          9,
+          15,
+          14
+        ],
+        "citedPages": [
+          15
+        ],
+        "warnings": [],
+        "answer": "The four core principles of healthy diets are universal, but the foods people actually eat—their dietary patterns—are shaped by many local factors.  Dietary patterns are “determined by a wide variety of social, economic and environmental factors including individual preferences and beliefs, culture, traditions, religion, income and the availability and affordability of foods”[WHO-FAO Healthy Diets Report, p. 15].  \n\nBecause of these contextual influences, national food‑based dietary guidelines are created “based on local considerations and evidence and that provide recommendations for combinations of food groups, their proportionality and sometimes frequency”[WHO-FAO Healthy Diets Report, p. 15].  The guidelines also aim to incorporate “environmental, socio‑cultural and economic considerations needed to enable healthy diets for all”[WHO-FAO Healthy Diets Report, p. 15].  \n\nTherefore, even though the underlying principles are the same everywhere, national dietary guidelines differ across countries in order to adapt those principles to each country’s specific cultural, economic, environmental and food‑system context.",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "contextual",
+          "culture",
+          "economic",
+          "availability"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 20634
+    },
+    {
+      "id": "Q19",
+      "category": "follow_up",
+      "question": "Which of these principles is most closely related to eating a variety of foods?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        9,
+        14
+      ],
+      "expectedKeyFacts": [
+        "diverse",
+        "variety"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.5434,
+        "retrievedPages": [
+          14,
+          14,
+          9,
+          15
+        ],
+        "citedPages": [
+          9
+        ],
+        "warnings": [],
+        "answer": "The principle that most directly refers to eating a variety of foods is the **Diverse** principle, which calls for “including a wide variety of nutritious foods within and across food groups” [WHO-FAO Healthy Diets Report, p. 9].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "diverse",
+          "variety"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 18156
+    },
+    {
+      "id": "Q20",
+      "category": "follow_up",
+      "question": "Explain the second principle you mentioned earlier in simple terms.",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        9,
+        12
+      ],
+      "expectedKeyFacts": [
+        "balanced",
+        "energy",
+        "fats",
+        "carbohydrates",
+        "proteins"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.8111,
+        "retrievedPages": [
+          9,
+          10,
+          15
+        ],
+        "citedPages": [
+          9
+        ],
+        "warnings": [],
+        "answer": "The Balanced principle means that a healthy diet should provide the right mix of energy and nutrients—such as appropriate amounts of fats, carbohydrates and proteins—to support a healthy weight, growth and disease prevention [WHO-FAO Healthy Diets Report, p. 9].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "balanced",
+          "energy",
+          "fats",
+          "carbohydrates",
+          "proteins"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 21130
+    },
+    {
+      "id": "Q21",
+      "category": "follow_up",
+      "question": "Can I replace them with non-sugar sweeteners instead?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        13,
+        21
+      ],
+      "expectedKeyFacts": [
+        "not",
+        "non-sugar sweeteners",
+        "weight"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.9229,
+        "retrievedPages": [
+          13,
+          21,
+          21
+        ],
+        "citedPages": [
+          13,
+          21
+        ],
+        "warnings": [],
+        "answer": "The WHO/FAO guidance advises **against using non‑sugar sweeteners as a substitute for free sugars** when the goal is weight control or reducing the risk of diet‑related non‑communicable diseases. The report states that reduction of free‑sugar intake should be achieved without non‑sugar sweeteners because the evidence does not show long‑term benefits for weight control or disease risk [WHO-FAO Healthy Diets Report, p. 13] and explicitly recommends that non‑sugar sweeteners not be used for these purposes [WHO-FAO Healthy Diets Report, p. 21].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "not",
+          "non-sugar sweeteners",
+          "weight"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 18709
+    },
+    {
+      "id": "Q22",
+      "category": "follow_up",
+      "question": "What about a 7-year-old child—how much of them should they eat per day?",
+      "answerable": true,
+      "expectedBehavior": "answer",
+      "expectedPages": [
+        20
+      ],
+      "expectedKeyFacts": [
+        "350",
+        "vegetables",
+        "fruits"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.4718,
+        "retrievedPages": [
+          20,
+          21
+        ],
+        "citedPages": [
+          20
+        ],
+        "warnings": [],
+        "answer": "A 7‑year‑old child should eat at least 350 grams of vegetables and fruits each day [WHO-FAO Healthy Diets Report, p. 20].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "350",
+          "vegetables",
+          "fruits"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 15458
+    },
+    {
+      "id": "Q23",
+      "category": "unsupported_healthcare",
+      "question": "What does the report recommend regarding ketogenic diets for managing drug-resistant epilepsy?",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "expectedPages": [],
+      "expectedKeyFacts": [],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "refused",
+        "topScore": 0.0251,
+        "retrievedPages": [
+          14,
+          13,
+          12,
+          20,
+          20
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I couldn't find a reliable answer to that in your selected documents. I don't want to guess. Would you like me to search the web for an answer?",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": null,
+        "reciprocalRank": null,
+        "answerCorrect": null,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [],
+        "citationAccurate": null,
+        "faithful": null,
+        "refusalCorrect": true,
+        "falseAnswer": false
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 4080
+    },
+    {
+      "id": "Q24",
+      "category": "unsupported_healthcare",
+      "question": "What is the safe daily caffeine limit during pregnancy according to the report?",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "expectedPages": [],
+      "expectedKeyFacts": [],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "refused",
+        "topScore": 0.0094,
+        "retrievedPages": [
+          20,
+          13,
+          19,
+          20,
+          21
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I couldn't find a reliable answer to that in your selected documents. I don't want to guess. Would you like me to search the web for an answer?",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": null,
+        "reciprocalRank": null,
+        "answerCorrect": null,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [],
+        "citationAccurate": null,
+        "faithful": null,
+        "refusalCorrect": true,
+        "falseAnswer": false
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 9155
+    },
+    {
+      "id": "Q25",
+      "category": "unsupported_healthcare",
+      "question": "How should basal insulin doses be adjusted for Type 1 diabetes patients?",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "expectedPages": [],
+      "expectedKeyFacts": [],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "refused",
+        "topScore": 0.0019,
+        "retrievedPages": [
+          10,
+          13,
+          12,
+          18,
+          21
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I couldn't find a reliable answer to that in your selected documents. I don't want to guess. Would you like me to search the web for an answer?",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": null,
+        "reciprocalRank": null,
+        "answerCorrect": null,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [],
+        "citationAccurate": null,
+        "faithful": null,
+        "refusalCorrect": true,
+        "falseAnswer": false
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 2174
+    },
+    {
+      "id": "Q26",
+      "category": "unsupported_healthcare",
+      "question": "What are the early symptoms and antibiotic treatments for Lyme disease?",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "expectedPages": [],
+      "expectedKeyFacts": [],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "refused",
+        "topScore": 0.0005,
+        "retrievedPages": [
+          20,
+          4,
+          14,
+          18,
+          10
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I couldn't find a reliable answer to that in your selected documents. I don't want to guess. Would you like me to search the web for an answer?",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": null,
+        "reciprocalRank": null,
+        "answerCorrect": null,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [],
+        "citationAccurate": null,
+        "faithful": null,
+        "refusalCorrect": true,
+        "falseAnswer": false
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 5099
+    },
+    {
+      "id": "Q27",
+      "category": "unsupported_healthcare",
+      "question": "Does the report recommend intermittent fasting protocols such as 16:8 for longevity?",
+      "answerable": false,
+      "expectedBehavior": "refuse",
+      "expectedPages": [],
+      "expectedKeyFacts": [],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "refused",
+        "topScore": 0.0187,
+        "retrievedPages": [
+          16,
+          13,
+          21,
+          13,
+          16
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I couldn't find a reliable answer to that in your selected documents. I don't want to guess. Would you like me to search the web for an answer?",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": null,
+        "reciprocalRank": null,
+        "answerCorrect": null,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [],
+        "citationAccurate": null,
+        "faithful": null,
+        "refusalCorrect": true,
+        "falseAnswer": false
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 2076
+    },
+    {
+      "id": "Q28",
+      "category": "misleading_premise",
+      "question": "Since the report recommends using non-sugar sweeteners for long-term weight control, what daily dosage does it prescribe?",
+      "answerable": true,
+      "expectedBehavior": "correct_premise",
+      "expectedPages": [
+        13,
+        21
+      ],
+      "expectedKeyFacts": [
+        "not",
+        "non-sugar sweeteners",
+        "weight control"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": false,
+        "grounded": true,
+        "canSearchWeb": false,
+        "gateMode": "rerank-threshold",
+        "topScore": 0.8426,
+        "retrievedPages": [
+          21,
+          13,
+          21
+        ],
+        "citedPages": [
+          21,
+          13
+        ],
+        "warnings": [],
+        "answer": "The report does **not** recommend using non‑sugar sweeteners to achieve weight control, and therefore it does not give any daily dosage for them. It states that non‑sugar sweeteners should not be used as a means of achieving weight control or reducing the risk of non‑communicable diseases [WHO-FAO Healthy Diets Report, p. 21] and that reduction of free‑sugar intake should be achieved **without** using non‑sugar sweeteners because they do not help with long‑term weight control [WHO-FAO Healthy Diets Report, p. 13].",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": true,
+        "keyFactsMatched": [
+          "not",
+          "non-sugar sweeteners",
+          "weight control"
+        ],
+        "keyFactsMissing": [],
+        "citationAccurate": true,
+        "faithful": true,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": true,
+      "failureStage": null,
+      "tookMs": 5048
+    },
+    {
+      "id": "Q29",
+      "category": "misleading_premise",
+      "question": "What exact safe daily limit of ultra-processed foods (UPFs) does the WHO-FAO report establish?",
+      "answerable": true,
+      "expectedBehavior": "correct_premise",
+      "expectedPages": [
+        14
+      ],
+      "expectedKeyFacts": [
+        "not",
+        "defined",
+        "further research"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "document_query",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "refused",
+        "topScore": 0.1136,
+        "retrievedPages": [
+          13,
+          20,
+          21,
+          17,
+          10
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I couldn't find a reliable answer to that in your selected documents. I don't want to guess. Would you like me to search the web for an answer?",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": false,
+        "reciprocalRank": 0,
+        "answerCorrect": false,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [
+          "not",
+          "defined",
+          "further research"
+        ],
+        "citationAccurate": false,
+        "faithful": false,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": false,
+      "failureStage": "Retrieval / Reranking",
+      "tookMs": 6213
+    },
+    {
+      "id": "Q30",
+      "category": "misleading_premise",
+      "question": "Why does the report advise introducing diverse solid foods to infants starting at 3 months of age?",
+      "answerable": true,
+      "expectedBehavior": "correct_premise",
+      "expectedPages": [
+        10,
+        14
+      ],
+      "expectedKeyFacts": [
+        "6 months",
+        "breastmilk",
+        "exclusive breastfeeding"
+      ],
+      "actual": {
+        "mode": "rag",
+        "intent": "follow_up",
+        "refused": true,
+        "grounded": false,
+        "canSearchWeb": true,
+        "gateMode": "refused",
+        "topScore": 0.0914,
+        "retrievedPages": [
+          14,
+          10,
+          16,
+          14,
+          17
+        ],
+        "citedPages": [],
+        "warnings": [],
+        "answer": "I couldn't find a reliable answer to that in your selected documents. I don't want to guess. Would you like me to search the web for an answer?",
+        "error": null
+      },
+      "metrics": {
+        "recallAt5": true,
+        "reciprocalRank": 1,
+        "answerCorrect": false,
+        "keyFactsMatched": [],
+        "keyFactsMissing": [
+          "6 months",
+          "breastmilk",
+          "exclusive breastfeeding"
+        ],
+        "citationAccurate": false,
+        "faithful": false,
+        "refusalCorrect": null,
+        "falseAnswer": null
+      },
+      "passed": false,
+      "failureStage": "Relevance gate",
+      "tookMs": 8843
+    }
+  ]
+}

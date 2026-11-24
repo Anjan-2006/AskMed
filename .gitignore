@@ -1,0 +1,25 @@
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+build/
+
+# Logs and coverage
+*.log
+coverage/
+
+# Uploads and temporary files
+uploads/
+tmp/
+temp/
+
+# OS/editor files
+.DS_Store
+.vscode/
